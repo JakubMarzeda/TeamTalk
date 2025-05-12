@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  fastapi:
+    build: .
+    container_name: teamtalk_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:6.0
+    container_name: teamtalk_database
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

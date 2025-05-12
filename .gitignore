@@ -1,0 +1,7 @@
+.idea
+.venv
+app/__pycache__/
+blueprint.txt
+app/endpoints/__pycache__/
+app/models/__pycache__/
+app/schemas/__pycache__/
