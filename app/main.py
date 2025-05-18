@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from endpoints.groups import router as groups_router
-from endpoints.messages import router as messages_router
-from endpoints.users import router as users_router
-from endpoints.auth import router as auth_router
-from endpoints.chat import router as chat_router
+from .endpoints.groups import router as groups_router
+from .endpoints.messages import router as messages_router
+from .endpoints.users import router as users_router
+from .endpoints.auth import router as auth_router
+from .endpoints.chat import router as chat_router
 
 app = FastAPI()
 

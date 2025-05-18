@@ -6,9 +6,6 @@ class Users(Document):
     first_name = StringField(max_length=50)
     last_name = StringField(max_length=50)
     email = EmailField(max_length=50, required=True)
-    groups = ListField(ReferenceField("Groups"))
     password = StringField(required=True)
-    registration_date = DateTimeField(default=datetime.utcnow)
+    register_date = DateTimeField(default=datetime.utcnow)
     updated_date = StringField(default=datetime.utcnow)
-
-

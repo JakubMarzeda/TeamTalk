@@ -8,3 +8,10 @@ class UserSchema(BaseModel):
     email: EmailStr
     groups: List[str]
     password: str
+
+class GetUserSchema(BaseModel):
+    id: str
+    first_name: str
+    last_name: str
+    email: EmailStr
+    groups: List[str]
